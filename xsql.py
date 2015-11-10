@@ -30,7 +30,7 @@ class Xsql(object):
         assert type(values) is list, 'values must be a list of values'
         assert (len(keys) > 0) & (len(values) > 0), 'keys and values can not be emtpy lists'
         assert len(keys) == len(values), 'keys and values must match up'
-# INSERT INTO `plant1`(`moisture`, `light`, `addWater`, `temperature`, `note`) VALUES (123,321,123,321,'abc')
+    # INSERT INTO `plant1`(`moisture`, `light`, `addWater`, `temperature`, `note`) VALUES (123,321,123,321,'abc')
         sql_first = "INSERT INTO `"+table_name+"`("
         sql_second = ") VALUES ("
         sql_third = ")"
@@ -45,27 +45,6 @@ class Xsql(object):
         try:
             with self.connection.cursor() as cursor:
                 cursor.execute(sql)
-            # connection is not autocommit by default. So you must commit to save
-            # your changes.
-            self.connection.commit()
-            print 'Data writing succeed'
-        except pymysql.ProgrammingError:
-            print 'Data writing failed, Check Table Name'
-        except pymysql.InternalError:
-            print 'Data writing failed, check column key word'
-
-    def write_data_old(self,table_name, key, value):
-        assert type(table_name) is str, 'Table name must be a string'
-        assert type(key) is str, 'Key must be a string'
-        assert type(value) is str, 'Value must be a string'
-        # assert self.is_valid_key(key), 'The key you entered does not exist!'
-        assert self.connection_status, 'You must connect to a database first!'
-        try:
-            with self.connection.cursor() as cursor:
-                # Create a new record
-                sql = "INSERT INTO `" + table_name + "` (`" + key + "`) VALUES (" + value + ")"
-                cursor.execute(sql)
-
             # connection is not autocommit by default. So you must commit to save
             # your changes.
             self.connection.commit()
