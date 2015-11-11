@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import serial
-
+import xsql
+import myjson
 import glob
 '''
 devices_list =  glob.glob('/dev/tty.usb*')
@@ -18,8 +19,7 @@ moist
 volume
 """
 '{"moisture":12.0,"light":122,"temperature":12}'
-import xsql
-import myjson
+
 a = xsql.Xsql()
 print a.start_connection('greenwall1','root')
 keys =['moisture','light','note']

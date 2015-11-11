@@ -37,6 +37,11 @@ class Myjson(object):
                 upper_index = self.json.index('"',lower_index+2)
                 keys_list.append(self.json[lower_index+1:upper_index])
         return keys_list
+    def get_valuesList(self):
+        keys_list = self.get_keys()
+        values_list = []
+        for x in keys_list:
+            values_list.append(self.get_value(x))
 
     def convert_to_list(self):
         keys_list = self.get_keys()
