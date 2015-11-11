@@ -42,6 +42,7 @@ class Myjson(object):
         values_list = []
         for x in keys_list:
             values_list.append(self.get_value(x))
+        return values_list
 
     def convert_to_list(self):
         keys_list = self.get_keys()

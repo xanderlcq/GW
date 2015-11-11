@@ -12,7 +12,7 @@ print a.start_connection('greenwall1','root')
 
 while 1 == 1:
     reading = ser.readline()
-    if (reading is not None) and (reading !=''):
+    if (reading is not None) and (reading != ''):
         print reading
         plant = reading[0:reading.index("{")]
         json_string = reading[reading.index("{"):]

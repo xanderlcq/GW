@@ -20,8 +20,8 @@
     <SUITE FILE_PATH="coverage/GW$automation.coverage" NAME="automation Coverage Results" MODIFIED="1447216940077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GW$data_test.coverage" NAME="data_test Coverage Results" MODIFIED="1446087893783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GW$xsql.coverage" NAME="xsql Coverage Results" MODIFIED="1447053443276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GW$emailtest.coverage" NAME="emailtest Coverage Results" MODIFIED="1447217389309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GW$emailer.coverage" NAME="emailer Coverage Results" MODIFIED="1446144734423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GW$emailtest.coverage" NAME="emailtest Coverage Results" MODIFIED="1447053980789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GW$test_file.coverage" NAME="test_file Coverage Results" MODIFIED="1446091382011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -43,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/xsql.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding>
                 <element signature="e#17#31#0" expanded="true" />
                 <marker date="1447095822000" expanded="true" signature="1387:1416" placeholder="INSERT INTO ..." />
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.28392485">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
               <folding>
                 <element signature="e#18#31#0" expanded="true" />
               </folding>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="automation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="automation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53235906">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
               <folding>
                 <element signature="e#17#30#0" expanded="true" />
               </folding>
@@ -80,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/myjson.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -117,9 +117,9 @@
         <option value="$PROJECT_DIR$/emailtest.py" />
         <option value="dbprocedure:/97a13aa4/13f58c64-9549-4604-b076-2381238c5bac/test..test_multi_sets" />
         <option value="$PROJECT_DIR$/xsql.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/myjson.py" />
         <option value="$PROJECT_DIR$/automation.py" />
+        <option value="$PROJECT_DIR$/myjson.py" />
+        <option value="$PROJECT_DIR$/test.py" />
       </list>
     </option>
   </component>
@@ -213,7 +213,7 @@
     <property name="FullScreen" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Python.automation">
+  <component name="RunManager" selected="Python.emailtest">
     <configuration default="false" name="emailtest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -501,8 +501,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.automation" />
-        <item index="1" class="java.lang.String" itemvalue="Python.emailtest" />
+        <item index="0" class="java.lang.String" itemvalue="Python.emailtest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.automation" />
         <item index="2" class="java.lang.String" itemvalue="Python.xsql" />
         <item index="3" class="java.lang.String" itemvalue="Python.emailer" />
         <item index="4" class="java.lang.String" itemvalue="Python.test_file" />
@@ -978,10 +978,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/automation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#17#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/xsql.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding>
             <element signature="e#17#31#0" expanded="true" />
             <marker date="1447095822000" expanded="true" signature="1387:1416" placeholder="INSERT INTO ..." />
@@ -992,27 +1002,17 @@
     <entry file="file://$PROJECT_DIR$/myjson.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.28392485">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding>
             <element signature="e#18#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53235906">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#17#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
