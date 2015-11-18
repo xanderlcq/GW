@@ -1,20 +1,20 @@
-__author__ = 'x'
 import serial
-import xsql
-import myjson
 import glob
+import datablock
+import xsql
 
-devices_list =glob.glob('/dev/tty.ACM*')
+devices_list = glob.glob('/dev/ttyACM*')
 print devices_list[0]
 ser = serial.Serial(devices_list[0],9600)
-a = xsql.Xsql()
-print a.start_connection('greenwall1','root')
+sql = xsql.Xsql()
+print sql.start_connection('greenwall1', 'root', 'xander')
 
-while 1 == 1:
-    reading = ser.readline()
-    if (reading is not None) and (reading != ''):
-        print reading
-        plant = reading[0:reading.index("{")]
-        json_string = reading[reading.index("{"):]
-        json = myjson.Myjson(json_string)
-        a.write_data(plant, json.get_keys(), json.get_valuesList())
+while True:
+    try:
+        data = datablock.Datablock(ser.readline)
+        if data.is_valid():
+            sql.write_data(data.get_id(), data.get_data_keys(), data.get_data())
+    except AssertionError:
+        print 'Serial reading failed'
+        sql.write_data('log', 'errors', 'Serial reading failed.')
+

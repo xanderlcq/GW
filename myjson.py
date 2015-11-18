@@ -4,7 +4,7 @@ __author__ = 'x'
 class Myjson(object):
 
     def __init__(self,json):
-        assert self._is_json(json), 'Invalid Json Format'
+        assert self._is_json(json), AssertionError
         self.json = json
 
     def load_json(self,json):
@@ -60,5 +60,7 @@ class Myjson(object):
             return False
         return True
 
+    def __str__(self):
+        return 'Keys are: '+str(self.get_keys())+', values are: '+str(self.get_valuesList())
 # '{"key1":1.0,"key2":"str","key3":1}'
 
