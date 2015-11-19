@@ -9,4 +9,4 @@ try:
     print data.is_valid()
     print data
 except AssertionError:
-    print 1
+    print 'Serial reading failed'

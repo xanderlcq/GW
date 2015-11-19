@@ -12,7 +12,8 @@ class Myjson(object):
         self.json = json
 
     def get_value(self,key):
-        assert self.json.find(key) != -1, 'The key you are looking for does not exist'
+        assert self.json.find(key) != -1, 'The key you are looking for ' \
+                                          'does not exist'
         lower_index = self.json.index(key)+len(key)+2
         upper_index = self.json.find(',',lower_index)
         if upper_index == -1:
@@ -61,6 +62,7 @@ class Myjson(object):
         return True
 
     def __str__(self):
-        return 'Keys are: '+str(self.get_keys())+', values are: '+str(self.get_valuesList())
+        return 'Keys are: '+str(self.get_keys())+\
+               ', values are: '+str(self.get_valuesList())
 # '{"key1":1.0,"key2":"str","key3":1}'
 

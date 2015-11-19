@@ -33,6 +33,8 @@ class Datablock(object):
             self.json = myjson.Myjson(data)
 
     def is_valid(self):
-        return self.data is not None and self.data != '' and self.json is not None
+        return self.data is not None and self.data != '' \
+               and self.json is not None
+
     def __str__(self):
         return 'Raw data : '+self.get_raw_data()+'\nJson: '+str(self.json)

@@ -16,5 +16,3 @@ while True:
             sql.write_data(data.get_id(), data.get_data_keys(), data.get_data())
     except AssertionError:
         print 'Serial reading failed'
-        sql.write_data('log', 'errors', 'Serial reading failed.')
-
