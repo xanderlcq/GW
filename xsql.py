@@ -8,9 +8,9 @@ class Xsql(object):
         self.connection = None
         self.connection_status = False
 
-    def start_connection(self, database,user, password=None):
+    def start_connection(self, host,database,user, password=None):
         try:
-            self.connection = pymysql.connect(host='127.0.0.1',
+            self.connection = pymysql.connect(host=host,
                                  user=user, passwd=password,
                                  db=database)
             self.connection_status = True

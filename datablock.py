@@ -10,9 +10,11 @@ class Datablock(object):
             self.json = myjson.Myjson(self.get_raw_data())
 
     def get_id(self):
+        assert self.data.find("{") != -1, AssertionError
         return self.data[0:self.data.index("{")]
 
     def get_raw_data(self):
+        assert self.data.find("{") != -1, AssertionError
         return self.data[self.data.index("{"):]
 
     def get_json(self):

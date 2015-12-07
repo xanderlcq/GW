@@ -1,6 +1,7 @@
 __author__ = 'x'
 # Last edit: 10/27/15 17:50
 
+
 class Myjson(object):
 
     def __init__(self,json):
