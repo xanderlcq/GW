@@ -8,9 +8,8 @@ devices_list = glob.glob('/dev/ttyACM*')
 print devices_list[0]
 
 sql = xsql.Xsql()
-print sql.start_connection(host='greenwall1.ckjdodi2wmgo.us-east-1.r'
-                                'ds.amazonaws.com',database='greenwall1',
-                           user='root', password='xander')
+print sql.start_connection(host='greenwall.ckjdodi2wmgo.us-east-1.rds.amazonaws.com',database='gw',
+                           user='root', password='xander1997')
 serials = []
 for ports in devices_list:
     serials.append(serial.Serial(devices_list[0],9600))

@@ -16,7 +16,7 @@ try:
 except AssertionError:
     print 'Serial reading failed'
 '''
-data = datablock.Datablock("WARNING{\"error\":\"water tank empty\"}")
+data = datablock.Datablock("sample{\"error\":\"water tank empty\"}")
 print data.get_raw_data()
 print data.get_id()
 print data.get_data_keys()
@@ -28,4 +28,9 @@ e = emailer.Emailer()
 msg = e.generate_data_email(data,'error')
 print msg
 
-#e.send_email('WARNING',msg,'ali@deerfield.edu')
+e#.send_email('WARNING',msg,'ali@deerfield.edu')
+
+sql = xsql.Xsql()
+print sql.start_connection(host='greenwall.ckjdodi2wmgo.us-east-1.rds.amazonaws.com',database='gw',
+                           user='root', password='xander1997')
+sql.write_data(data.get_id(), data.get_data_keys(), data.get_data())
