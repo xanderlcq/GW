@@ -27,17 +27,24 @@ class Emailer(object):
         session.close()
         print 'sent'
 
-    @staticmethod
-    def generate_data_email(self,json_input):
+    def generate_data_email(self,data,special_key = None):
         current_time = time.asctime(time.localtime())
         header = """<html><head><title></title></head><body ginger_software_doc="true"
          ginger_software_stylesheet="true"><p>The time right now is: """+current_time+"""."""
         footer = """</body></html>"""
         body = """"""
-        for key in json_input.get_keys():
-            value = json_input.get_value(key)
-            if key == 'volume':
-                body = body + """<p>Just Added """+value+"""ml of water</p>"""
-            body = body + """<p>Current """+key+""" is: """+value+""".</p>"""
+        if special_key is not None:
+            body = body + """<p>!!!WARNING!!!</p>"""
+            body = body + """<p>Current """+special_key+""" is: """+data.get_value(special_key)+""".</p>"""
+        else:
+            for key in data.get_data_keys():
+                print key
+                value = data.get_value(key)
+                print value
+                if key == 'volume':
+                    body = body + """<p>Just Added """+value+"""ml of water</p>"""
+                if data.get_id() == 'WARNING':
+                    body = body + """<p>!!!WARNING!!!</p>"""
+                body = body + """<p>Current """+key+""" is: """+value+""".</p>"""
         msg = header+body+footer
         return msg
