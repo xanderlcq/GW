@@ -4,7 +4,11 @@ import myjson
 class Datablock(object):
 
     def __init__(self,data):
-        self.data = data
+
+        if data is not None:
+            self.data = data
+        else:
+            data = ''
         self.json = None
         if data is not None and (data != ''):
             self.json = myjson.Myjson(self.get_raw_data())
