@@ -25,12 +25,12 @@ print data.is_valid()
 print data.get_value(data.get_data_keys()[0])
 import emailer
 e = emailer.Emailer()
-msg = e.generate_data_email(data,'error')
+msg = e.generate_data_email(data)
 print msg
 
 e#.send_email('WARNING',msg,'ali@deerfield.edu')
 
-sql = xsql.Xsql()
-print sql.start_connection(host='greenwall.ckjdodi2wmgo.us-east-1.rds.amazonaws.com',database='gw',
-                           user='root', password='xander1997')
-sql.write_data(data.get_id(), data.get_data_keys(), data.get_data())
+#sql = xsql.Xsql()
+#print sql.start_connection(host='greenwall.ckjdodi2wmgo.us-east-1.rds.amazonaws.com',database='gw',
+                          # user='root', password='xander1997')
+#sql.write_data(data.get_id(), data.get_data_keys(), data.get_data())

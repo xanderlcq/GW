@@ -23,6 +23,26 @@ class Xsql(object):
         self.connection.close()
         self.connection_status = False
         return 'Mysql database connection closed.'
+    def read_data(self,table_name,cols,threshold_key,threldhold_value):
+        values = []
+        sql_first = "SELECT "
+        sql_second = " FROM `"+table_name+"` "
+        sql_third = "WHERE"
+        for x in range(len(threshold_key)):
+            sql_third += " `"+threshold_key[x]+"`="+threldhold_value[x]+" AND"
+        for x in range(len(cols)):
+            keys_append = "`"+cols[x]+"`, "
+            sql_first += keys_append
+        sql1 = sql_first[0:len(sql_first)-2]+sql_second+sql_third[0:len(sql_third)-4]
+        try:
+            with self.connection.cursor() as cursor:
+                cursor.execute(sql1)
+                values = cursor.fetchone()
+        except pymysql.ProgrammingError:
+            print 'Data reading failed, Check Table Name'
+        except pymysql.InternalError:
+            print 'Data reading failed, check column key word'
+        return values
 
     def write_data(self,table_name,keys,values):
         assert type(table_name) is str, 'Table name must be a string'
